@@ -1,5 +1,8 @@
-import { ReactNode } from "react";
+import { NextPage } from "next";
+import React from "react";
 
-export default function Home() {
-  return <></>;
-}
+const HomePage: NextPage = () => {
+  return <div style={{ margin: "0 10%" }}>HomePage</div>;
+};
+
+export default HomePage;

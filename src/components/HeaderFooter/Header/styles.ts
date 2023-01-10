@@ -17,8 +17,9 @@ export const LogoSection = styled.div`
 `;
 
 export const Logo = styled.img`
-  content: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/SpaceX_logo_black.svg/2560px-SpaceX_logo_black.svg.png");
+  content: url("/images/logo.png");
   filter: ${({ theme }) => theme.imageFilter};
+  cursor: pointer;
 
   width: 15rem;
 `;
