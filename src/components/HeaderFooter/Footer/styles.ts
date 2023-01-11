@@ -6,7 +6,7 @@ export const Footer = styled.div`
 
   padding: 2rem;
 
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.darker};
 `;
 
 export const Link = styled.a`

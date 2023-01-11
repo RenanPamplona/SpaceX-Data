@@ -7,7 +7,7 @@ export const Header = styled.div`
 
   padding: 1rem 10%;
 
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.darker};
 `;
 
 export const LogoSection = styled.div`
@@ -36,7 +36,7 @@ export const LinksSection = styled.div`
 
 export const Link = styled.a`
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: ${({ theme }) => theme.colors.primary};
 
   &:hover {

@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from "next";
 import React, { ReactNode } from "react";
+import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchHistory, HistoryType } from "../../src/services/history";
-import TitleWithImage from "../../src/TitleWithImage";
 import * as S from "./styles";
 
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -29,6 +29,7 @@ const History: NextPage = (props: {
           "https://live.staticflickr.com/8570/16698990475_7f69dca673_k.jpg"
         }
       />
+      <p>sadsadkasjdaskdjskdjajdskk</p>
     </>
   );
 };
