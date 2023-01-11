@@ -1,4 +1,5 @@
 import { GetServerSideProps, NextPage } from "next";
+import Head from "next/head";
 import React, { ReactNode } from "react";
 import HistoryCard from "../../src/components/HistoryCard";
 import TitleWithImage from "../../src/components/TitleWithImage";
@@ -25,14 +26,14 @@ const History: NextPage = (props: {
 
   return (
     <>
+      <Head>
+        <title>History</title>
+      </Head>
+
       <TitleWithImage
-        title={"History"}
-        subtitle={
-          "Here you can check SpaceX's milestones in its existance as a company"
-        }
-        image={
-          "https://live.staticflickr.com/8570/16698990475_7f69dca673_k.jpg"
-        }
+        title="History"
+        subtitle="Here you can check SpaceX's milestones in its existance as a company"
+        image="https://live.staticflickr.com/8570/16698990475_7f69dca673_k.jpg"
       />
       <S.Wrapper>
         {props.historyArray?.map((history) => (
