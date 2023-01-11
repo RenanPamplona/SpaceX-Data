@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { ReactNode } from "react";
 import * as S from "./styles";
 
@@ -5,12 +6,18 @@ const Header = (props: { children?: ReactNode; themeButton: JSX.Element }) => {
   return (
     <S.Header>
       <S.LogoSection>
-        <S.Logo />
+        <Link href="/">
+          <S.Logo />
+        </Link>
       </S.LogoSection>
 
       <S.LinksSection>
-        <S.Link>INFO</S.Link>
-        <S.Link>ABOUT</S.Link>
+        <Link style={{ textDecoration: "none" }} href="/companyInfo">
+          <S.Link>INFO</S.Link>
+        </Link>
+        <Link href="/about" style={{ textDecoration: "none" }}>
+          <S.Link>ABOUT</S.Link>
+        </Link>
       </S.LinksSection>
 
       <S.ButtonSection>{props.themeButton}</S.ButtonSection>

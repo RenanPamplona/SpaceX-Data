@@ -34,10 +34,11 @@ export const LinksSection = styled.div`
   padding: 0rem 1rem;
 `;
 
-export const Link = styled.a`
+export const Link = styled.span`
   font-weight: 600;
   font-size: 0.9rem;
   color: ${({ theme }) => theme.colors.primary};
+  text-decoration: none;
 
   &:hover {
     color: ${({ theme }) => theme.colors.secondary};
