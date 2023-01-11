@@ -5,6 +5,7 @@ export type HistoryType = {
   links: {
     article: string;
   };
+  id: string;
 };
 
 export const fetchHistory = async () => {

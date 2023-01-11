@@ -5,7 +5,9 @@ export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.text};
 
   width: 100%;
-  padding: 4rem 10%;
-`;
+  padding: 3rem 10%;
 
-export const CardsWrapper = styled.div``;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+`;

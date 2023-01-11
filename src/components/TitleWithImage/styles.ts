@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
-  margin-bottom: 3rem;
+  max-width: 100vw;
 `;
 
 export const Image = styled.img`
