@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 
 export const Image = styled.img`
   width: 100vw;
-  height: 50vh;
+  height: 60vh;
   object-fit: cover;
   object-position: center;
 
@@ -35,4 +35,23 @@ export const TextDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+`;
+
+export const Back = styled.span`
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+  padding: 1rem;
+
+  font-size: 2rem;
+  color: #f1f5f9;
+
+  border: solid 2px transparent;
+  border-radius: 10px;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    cursor: pointer;
+  }
 `;

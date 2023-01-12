@@ -8,3 +8,8 @@ This website is being developed by educational purposes, and its main objective 
 - Styled Components
 - Typescript
 - Font Awesome
+
+## Important
+
+All images come from SpaceX Flickr (https://www.flickr.com/people/spacex/)
+All Data comes from SpaceX API (https://github.com/r-spacex/SpaceX-API)

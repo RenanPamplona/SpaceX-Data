@@ -1,3 +1,6 @@
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from "next/navigation";
 import React, { ReactNode } from "react";
 import * as S from "./styles";
 
@@ -6,7 +9,10 @@ const TitleWithImage = (props: {
   title?: string;
   subtitle?: string;
   image?: string;
+  goBackLink?: string;
 }) => {
+  const router = useRouter();
+
   return (
     <S.Wrapper>
       <S.Image src={props.image} />
@@ -18,6 +24,15 @@ const TitleWithImage = (props: {
           <div></div>
         )}
       </S.TextDiv>
+      {props.goBackLink ? (
+        <S.Back
+          onClick={() => router.push(props.goBackLink ? props.goBackLink : "/")}
+        >
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </S.Back>
+      ) : (
+        <div></div>
+      )}
     </S.Wrapper>
   );
 };

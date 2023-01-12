@@ -43,6 +43,7 @@ const Rockets: NextPage = (props: {
       <TitleWithImage
         title="Rockets"
         image="https://live.staticflickr.com/65535/52568401533_0d06419f01_k.jpg"
+        goBackLink="/"
       />
       <SearchBar type="rockets" state={query} setStateMethod={setQuery} />
       <S.Wrapper>

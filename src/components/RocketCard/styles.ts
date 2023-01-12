@@ -43,7 +43,15 @@ export const ReadMore = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  font-size: 2rem;
 
+  font-size: 2rem;
   font-weight: 600;
+
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    background-color: #e0e4e8;
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
 `;

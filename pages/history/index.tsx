@@ -22,8 +22,6 @@ const History: NextPage = (props: {
 }) => {
   props.historyArray?.reverse();
 
-  console.log(props.historyArray);
-
   return (
     <>
       <Head>
@@ -34,6 +32,7 @@ const History: NextPage = (props: {
         title="History"
         subtitle="Here you can check SpaceX's milestones in its existance as a company"
         image="https://live.staticflickr.com/8570/16698990475_7f69dca673_k.jpg"
+        goBackLink="/"
       />
       <S.Wrapper>
         {props.historyArray?.map((history) => (

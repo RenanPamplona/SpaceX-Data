@@ -60,8 +60,10 @@ export const ButtonDiv = styled.div`
   color: #f1f5f9;
 
   &:hover {
-    background-color: #f1f5f9;
+    background-color: #e0e4e8;
     color: ${({ theme }) => theme.colors.primary};
     cursor: pointer;
+    border: 2px solid ${({ theme }) => theme.colors.primary};
+    border-left: none;
   }
 `;
