@@ -6,7 +6,7 @@ export const darkTheme = {
     secondary: "#FA5923",
     darker: "#121212",
   },
-  imageFilter: "invert(1)",
+  imageFilter: "brightness(0) invert(1)",
 };
 export const lightTheme = {
   colors: {
@@ -16,5 +16,5 @@ export const lightTheme = {
     secondary: "#FA5923",
     darker: "#e0e4e8",
   },
-  imageFilter: "",
+  imageFilter: "brightness(0)",
 };

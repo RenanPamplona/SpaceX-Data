@@ -1,6 +1,6 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import HistoryCard from "../../src/components/HistoryCard";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchHistory, HistoryType } from "../../src/services/history";
@@ -21,6 +21,10 @@ const History: NextPage = (props: {
   historyArray?: HistoryType[];
 }) => {
   props.historyArray?.reverse();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

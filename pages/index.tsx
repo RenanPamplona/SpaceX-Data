@@ -15,7 +15,7 @@ import styled from "styled-components";
 import TitleWithImage from "../src/components/TitleWithImage";
 
 const Wrapper = styled.div`
-  padding: 3rem 20%;
+  padding: 3rem 25%;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
