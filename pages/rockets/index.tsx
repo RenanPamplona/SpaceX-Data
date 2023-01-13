@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
-import RocketCard from "../../src/components/RocketCard";
+import InfoCardBig from "../../src/components/InfoCardBig";
 import SearchBar from "../../src/components/SearchBar";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchAllRockets, RocketType } from "../../src/services/rocket";
@@ -48,7 +48,23 @@ const Rockets: NextPage = (props: {
       <SearchBar type="rockets" state={query} setStateMethod={setQuery} />
       <S.Wrapper>
         {rocketsToCompile.map((rocket) => (
-          <RocketCard key={rocket.id} rocket={rocket} />
+          <InfoCardBig
+            key={rocket.id}
+            name={rocket.name}
+            image={rocket.flickr_images[0]}
+            linkToPush={`/rockets/${rocket.id}`}
+            infos={[
+              rocket.description,
+              `Cost per launch ${rocket.cost_per_launch.toLocaleString(
+                "en-Us",
+                {
+                  style: "currency",
+                  currency: "USD",
+                }
+              )}`,
+              `Success rate: ${rocket.success_rate_pct}%`,
+            ]}
+          />
         ))}
       </S.Wrapper>
     </>

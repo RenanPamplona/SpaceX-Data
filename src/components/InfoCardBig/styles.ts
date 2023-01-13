@@ -6,6 +6,8 @@ export const Wrapper = styled.div`
   border: 2px solid;
   border-color: ${({ theme }) => theme.colors.primary};
   border-radius: 5px;
+
+  max-height: 70rem;
 `;
 
 export const Image = styled.img`
