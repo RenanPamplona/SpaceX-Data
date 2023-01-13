@@ -17,8 +17,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 const Crew = (props: { children?: ReactNode; crewMembers?: CrewType[] }) => {
-  console.log(props.crewMembers);
-
   return (
     <>
       <Head>

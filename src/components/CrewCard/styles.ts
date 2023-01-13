@@ -7,6 +7,12 @@ export const Wrapper = styled.div`
   align-items: center;
 
   position: relative;
+
+  transition: 0.15s linear;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const Image = styled.img`
@@ -41,7 +47,7 @@ export const NameDiv = styled.div`
 
 export const InfoHover = styled.div`
   width: 15rem;
-  height: 22rem;
+  height: 19rem;
 
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 5px;
@@ -49,6 +55,7 @@ export const InfoHover = styled.div`
   color: #f1f5f9;
 
   position: absolute;
+  top: 0;
   opacity: 0;
 
   transition: linear 0.15s;
@@ -58,6 +65,6 @@ export const InfoHover = styled.div`
   justify-content: center;
 
   &:hover {
-    opacity: 0.9;
+    opacity: 1;
   }
 `;
