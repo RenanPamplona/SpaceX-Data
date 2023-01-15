@@ -5,10 +5,13 @@ import * as S from "./styles";
 const StarlinkCard = (props: {
   children?: ReactNode;
   starlink?: StarlinkType;
+  popUpState: (string: string) => void;
 }) => {
   return (
     <>
-      <S.Wrapper>{props.starlink?.spaceTrack.OBJECT_NAME}</S.Wrapper>
+      <S.Wrapper onClick={() => props.popUpState(props.starlink?.id!)}>
+        {props.starlink?.spaceTrack.OBJECT_NAME}
+      </S.Wrapper>
     </>
   );
 };

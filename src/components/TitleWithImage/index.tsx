@@ -26,13 +26,7 @@ const TitleWithImage = (props: {
       </S.TextDiv>
       {props.goBackLink ? (
         <S.Back
-          onClick={() =>
-            router.push(
-              `${
-                window.history.back() == undefined ? "/" : window.history.back()
-              }`
-            )
-          }
+          onClick={() => router.push(props.goBackLink ? props.goBackLink : "/")}
         >
           <FontAwesomeIcon icon={faArrowLeft} />
         </S.Back>

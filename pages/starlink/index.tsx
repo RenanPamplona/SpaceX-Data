@@ -1,8 +1,10 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
+import { JsxElement } from "typescript";
 import SearchBar from "../../src/components/SearchBar";
 import StarlinkCard from "../../src/components/StarlinkCard";
+import StarlinkPopUp from "../../src/components/StarlinkPopUp";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchAllStarlinks, StarlinkType } from "../../src/services/starlink";
 import * as S from "./styles";
@@ -21,6 +23,7 @@ const Starlink = (props: {
   starlinkList?: StarlinkType[];
 }) => {
   const [query, setQuery] = useState<string>();
+  const [currentPopUp, setCurrentPopUp] = useState<string>("0");
   const starlinksToCompile: StarlinkType[] = [];
 
   props.starlinkList?.forEach((starlink) => {
@@ -37,6 +40,16 @@ const Starlink = (props: {
     setQuery("");
   }, []);
 
+  const starlinkPopUpObject: any = {
+    0: <div></div>,
+  };
+
+  props.starlinkList?.forEach((starlink) => {
+    starlinkPopUpObject[starlink.id] = (
+      <StarlinkPopUp starlink={starlink} popUpState={setCurrentPopUp} />
+    );
+  });
+
   return (
     <>
       <Head>
@@ -49,9 +62,16 @@ const Starlink = (props: {
         goBackLink="/"
       />
       <SearchBar setStateMethod={setQuery} type="starlinks" />
+
+      {starlinkPopUpObject[currentPopUp]}
+
       <S.Wrapper>
         {starlinksToCompile.map((starlink) => (
-          <StarlinkCard key={starlink.id} starlink={starlink} />
+          <StarlinkCard
+            key={starlink.id}
+            starlink={starlink}
+            popUpState={setCurrentPopUp}
+          />
         ))}
       </S.Wrapper>
     </>
