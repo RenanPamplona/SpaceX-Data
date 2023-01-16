@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
-import CrewCard from "../../src/components/CrewCard";
+import MediumCard from "../../src/components/MediumCard";
 import SearchBar from "../../src/components/SearchBar";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { CrewType, fetchAllCrew } from "../../src/services/crew";
@@ -45,7 +45,12 @@ const Crew = (props: { children?: ReactNode; crewMembers?: CrewType[] }) => {
       <S.WrapperWrapper>
         <S.Wrapper>
           {crewMembersToCompile?.map((crewMember) => (
-            <CrewCard crewMember={crewMember} key={crewMember.id} />
+            <MediumCard
+              name={crewMember.name}
+              image={crewMember.image}
+              key={crewMember.id}
+              id={crewMember.id}
+            />
           ))}
         </S.Wrapper>
       </S.WrapperWrapper>

@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import React, { ReactNode } from "react";
 import * as S from "./styles";
 
-const InfoCardBig = (props: {
+const BigCard = (props: {
   children?: ReactNode;
   name: string;
   infos: string[];
@@ -36,4 +36,4 @@ const InfoCardBig = (props: {
   );
 };
 
-export default InfoCardBig;
+export default BigCard;

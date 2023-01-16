@@ -16,8 +16,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 15rem;
-  height: 19rem;
+  width: 13rem;
+  height: 13rem;
 
   object-fit: cover;
   object-position: center;
@@ -38,7 +38,7 @@ export const NameDiv = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 15rem;
+  width: 13rem;
   height: 3rem;
 
   border-bottom-left-radius: 5px;
@@ -46,8 +46,8 @@ export const NameDiv = styled.div`
 `;
 
 export const InfoHover = styled.div`
-  width: 15rem;
-  height: 19rem;
+  width: 13rem;
+  height: 16rem;
 
   background-color: ${({ theme }) => theme.colors.primary};
   border-radius: 5px;

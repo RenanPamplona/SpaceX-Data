@@ -1,10 +1,9 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
-import { JsxElement } from "typescript";
 import PopUpSetup from "../../src/components/PopUpSetup";
 import SearchBar from "../../src/components/SearchBar";
-import StarlinkCard from "../../src/components/StarlinkCard";
+import SmallCard from "../../src/components/SmallCard";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchAllStarlinks, StarlinkType } from "../../src/services/starlink";
 import * as S from "./styles";
@@ -67,10 +66,11 @@ const Starlink = (props: {
 
       <S.Wrapper>
         {starlinksToCompile.map((starlink) => (
-          <StarlinkCard
+          <SmallCard
             key={starlink.id}
-            starlink={starlink}
+            name={starlink.spaceTrack.OBJECT_NAME}
             popUpState={setCurrentPopUp}
+            id={starlink.id}
           />
         ))}
       </S.Wrapper>

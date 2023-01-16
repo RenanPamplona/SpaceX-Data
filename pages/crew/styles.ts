@@ -11,5 +11,5 @@ export const Wrapper = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
 `;

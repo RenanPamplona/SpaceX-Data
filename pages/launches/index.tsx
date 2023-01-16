@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
-import LaunchCard from "../../src/components/LaunchCard";
+import MediumCard from "../../src/components/MediumCard";
 import SearchBar from "../../src/components/SearchBar";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchAllLaunches, LaunchType } from "../../src/services/launches";
@@ -49,7 +49,12 @@ const Launches = (props: {
       <S.WrapperWrapper>
         <S.Wrapper>
           {launchesToCompile.map((launch) => (
-            <LaunchCard key={launch.id} launch={launch} />
+            <MediumCard
+              key={launch.id}
+              name={launch.name}
+              image={launch.links.patch.small}
+              id={launch.id}
+            />
           ))}
         </S.Wrapper>
       </S.WrapperWrapper>

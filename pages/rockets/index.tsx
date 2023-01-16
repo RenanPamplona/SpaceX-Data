@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
-import InfoCardBig from "../../src/components/InfoCardBig";
+import BigCard from "../../src/components/BigCard";
 import SearchBar from "../../src/components/SearchBar";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchAllRockets, RocketType } from "../../src/services/rocket";
@@ -48,7 +48,7 @@ const Rockets: NextPage = (props: {
       <SearchBar type="rockets" state={query} setStateMethod={setQuery} />
       <S.Wrapper>
         {rocketsToCompile.map((rocket) => (
-          <InfoCardBig
+          <BigCard
             key={rocket.id}
             name={rocket.name}
             image={rocket.flickr_images[0]}
