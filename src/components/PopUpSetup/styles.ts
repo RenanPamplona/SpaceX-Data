@@ -10,10 +10,7 @@ export const Wrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
 `;
 
-export const MainContent = styled.div`
-  background-color: #f1f5f9;
-  padding: 2rem;
-`;
+export const MainContent = styled.div``;
 
 export const CloseButton = styled.button`
   position: fixed;
