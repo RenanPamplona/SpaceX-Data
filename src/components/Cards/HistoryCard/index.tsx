@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { ReactNode } from "react";
-import { HistoryType } from "../../services/history";
+import { HistoryType } from "../../../services/history";
 import * as S from "./styles";
 
 const monthName = (month: string) => {

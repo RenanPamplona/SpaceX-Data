@@ -1,7 +1,9 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
-import MediumCard from "../../src/components/MediumCard";
+import MediumCard from "../../src/components/Cards/MediumCard";
+import CrewPopUp from "../../src/components/PopUps/CrewPopUp";
+import PopUpSetup from "../../src/components/PopUpSetup";
 import SearchBar from "../../src/components/SearchBar";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { CrewType, fetchAllCrew } from "../../src/services/crew";
@@ -19,6 +21,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 const Crew = (props: { children?: ReactNode; crewMembers?: CrewType[] }) => {
   const [query, setQuery] = useState<string>();
+  const [currentPopUp, setCurrentPopUp] = useState<string>("0");
   const crewMembersToCompile: CrewType[] = [];
 
   props.crewMembers?.forEach((crewMember) => {
@@ -31,6 +34,18 @@ const Crew = (props: { children?: ReactNode; crewMembers?: CrewType[] }) => {
     setQuery("");
   }, []);
 
+  const crewPopUpObject: any = {
+    0: <div></div>,
+  };
+
+  props.crewMembers?.forEach((crewMember) => {
+    crewPopUpObject[crewMember.id] = (
+      <PopUpSetup popUpState={setCurrentPopUp}>
+        <CrewPopUp crewMember={crewMember} />
+      </PopUpSetup>
+    );
+  });
+
   return (
     <>
       <Head>
@@ -42,6 +57,9 @@ const Crew = (props: { children?: ReactNode; crewMembers?: CrewType[] }) => {
         goBackLink="/"
       />
       <SearchBar type="crew members" setStateMethod={setQuery} />
+
+      {crewPopUpObject[currentPopUp]}
+
       <S.WrapperWrapper>
         <S.Wrapper>
           {crewMembersToCompile?.map((crewMember) => (
@@ -50,6 +68,7 @@ const Crew = (props: { children?: ReactNode; crewMembers?: CrewType[] }) => {
               image={crewMember.image}
               key={crewMember.id}
               id={crewMember.id}
+              popUpState={setCurrentPopUp}
             />
           ))}
         </S.Wrapper>

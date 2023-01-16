@@ -32,6 +32,7 @@ const PopUpSetup = (props: {
 }) => {
   return (
     <div style={{ position: "relative" }}>
+      <S.LowOpacityScreen />
       <S.Wrapper>
         <S.MainContent>{props.children}</S.MainContent>
       </S.Wrapper>

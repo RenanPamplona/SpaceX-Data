@@ -1,9 +1,9 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
+import SmallCard from "../../src/components/Cards/SmallCard";
 import PopUpSetup from "../../src/components/PopUpSetup";
 import SearchBar from "../../src/components/SearchBar";
-import SmallCard from "../../src/components/SmallCard";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchAllStarlinks, StarlinkType } from "../../src/services/starlink";
 import * as S from "./styles";

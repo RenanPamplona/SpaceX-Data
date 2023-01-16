@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
-import MediumCard from "../../src/components/MediumCard";
+import MediumCard from "../../src/components/Cards/MediumCard";
 import SearchBar from "../../src/components/SearchBar";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchAllLaunches, LaunchType } from "../../src/services/launches";

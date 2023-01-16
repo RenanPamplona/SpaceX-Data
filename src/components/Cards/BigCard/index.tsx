@@ -7,7 +7,7 @@ import * as S from "./styles";
 const BigCard = (props: {
   children?: ReactNode;
   name: string;
-  infos: string[];
+  infos: string[] | ReactNode[];
   linkToPush: string;
   image: string;
 }) => {
@@ -18,10 +18,13 @@ const BigCard = (props: {
       <S.MainDiv>
         <S.InfoDiv>
           <S.Name>{props.name}</S.Name>
-
           {props.infos?.map((info) => (
             <S.Info key={""}>
-              {info.length > 500 ? info.slice(0, 501) + "..." : info}
+              {typeof info == "string"
+                ? info.length > 500
+                  ? info.slice(0, 501) + "..."
+                  : info
+                : info}
             </S.Info>
           ))}
         </S.InfoDiv>

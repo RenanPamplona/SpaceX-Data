@@ -1,4 +1,5 @@
 export const darkTheme = {
+  name: "dark",
   colors: {
     background: "#151515",
     text: "#f1f5f9",
@@ -9,6 +10,7 @@ export const darkTheme = {
   imageFilter: "brightness(0) invert(1)",
 };
 export const lightTheme = {
+  name: "light",
   colors: {
     background: "#f1f5f9",
     text: "#121212",

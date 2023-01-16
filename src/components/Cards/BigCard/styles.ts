@@ -3,15 +3,16 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 2px solid;
-  border-color: ${({ theme }) => theme.colors.primary};
-  border-radius: 5px;
 
-  max-height: 70rem;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: ${({ theme }) => theme.colors.primary};
+
+  background-color: ${({ theme }) => theme.colors.darker};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const Image = styled.img`
-  max-width: max-content;
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -28,7 +29,7 @@ export const InfoDiv = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 `;
 
 export const Name = styled.span`
@@ -36,7 +37,7 @@ export const Name = styled.span`
   font-weight: 700;
 `;
 
-export const Info = styled.span``;
+export const Info = styled.div``;
 
 export const ReadMore = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};

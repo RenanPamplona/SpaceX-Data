@@ -1,7 +1,7 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
-import BigCard from "../../src/components/BigCard";
+import BigCard from "../../src/components/Cards/BigCard";
 import SearchBar from "../../src/components/SearchBar";
 import TitleWithImage from "../../src/components/TitleWithImage";
 import { fetchAllRockets, RocketType } from "../../src/services/rocket";

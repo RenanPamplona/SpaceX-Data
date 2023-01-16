@@ -3,8 +3,8 @@ import Head from "next/head";
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../src/components/global/style/global";
+import { darkTheme, lightTheme } from "../src/components/global/style/theme";
 import HeaderFooter from "../src/components/HeaderFooter";
-import { darkTheme, lightTheme } from "./../src/components/global/style/theme";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState(darkTheme);
