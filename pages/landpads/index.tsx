@@ -54,7 +54,7 @@ const Landpads = (props: {
             key={landpad.id}
             name={landpad.full_name}
             image={landpad.images.large[0]}
-            linkToPush={`/landpads/${landpad.id}`}
+            linkToPush={landpad.wikipedia}
             infos={[
               landpad.details,
               `Success rate: ${(

@@ -21,6 +21,14 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 2rem;
+
+  @media (max-width: 920px) {
+    padding: 3rem 10%;
+  }
+
+  @media (max-width: 460px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Button = styled.div`
@@ -46,6 +54,13 @@ const Button = styled.div`
     color: ${({ theme }) => theme.colors.primary};
     border: 1px solid ${({ theme }) => theme.colors.primary};
     cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 460px) {
   }
 `;
 

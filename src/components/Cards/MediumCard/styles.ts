@@ -26,6 +26,15 @@ export const Image = styled.img`
   border-bottom: none;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+
+  @media (max-width: 580px) {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  @media (max-width: 440px) {
+    width: 15rem;
+  }
 `;
 
 export const NameDiv = styled.div`
@@ -43,6 +52,14 @@ export const NameDiv = styled.div`
 
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+
+  @media (max-width: 580px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 440px) {
+    width: 15rem;
+  }
 `;
 
 export const InfoHover = styled.div`
@@ -66,5 +83,13 @@ export const InfoHover = styled.div`
 
   &:hover {
     opacity: 1;
+  }
+
+  @media (max-width: 580px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 440px) {
+    width: 15rem;
   }
 `;

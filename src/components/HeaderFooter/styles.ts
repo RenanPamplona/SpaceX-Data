@@ -21,4 +21,8 @@ export const ThemeButton = styled.button`
   border: none;
   background-color: transparent;
   filter: ${({ theme }) => theme.imageFilter};
+
+  @media (max-width: 500px) {
+    font-size: 2rem;
+  }
 `;

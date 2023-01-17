@@ -9,6 +9,15 @@ export const ButtonsDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const MainInfo = styled.div`
@@ -18,6 +27,19 @@ export const MainInfo = styled.div`
   gap: 2rem;
 
   font-size: 1.3rem;
+
+  @media (max-width: 800px) {
+    padding: 4rem 10%;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 1rem;
+    padding: 4rem 5%;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const LabelAndInfo = styled.div`

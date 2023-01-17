@@ -8,6 +8,9 @@ export const Header = styled.div`
   padding: 1rem 10%;
 
   background-color: ${({ theme }) => theme.colors.darker};
+
+  @media (max-width: 500px) {
+  }
 `;
 
 export const LogoSection = styled.div`
@@ -22,6 +25,10 @@ export const Logo = styled.img`
   cursor: pointer;
 
   width: 15rem;
+
+  @media (max-width: 500px) {
+    width: 10rem;
+  }
 `;
 
 export const LinksSection = styled.div`

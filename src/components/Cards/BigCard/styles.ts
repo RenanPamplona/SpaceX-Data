@@ -10,6 +10,11 @@ export const Wrapper = styled.div`
 
   background-color: ${({ theme }) => theme.colors.darker};
   color: ${({ theme }) => theme.colors.text};
+
+  @media (max-width: 850px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;
 
 export const Image = styled.img`
@@ -35,9 +40,21 @@ export const InfoDiv = styled.div`
 export const Name = styled.span`
   font-size: 3rem;
   font-weight: 700;
+
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1rem;
+  }
 `;
 
-export const Info = styled.div``;
+export const Info = styled.div`
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
+`;
 
 export const ReadMore = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -56,5 +73,9 @@ export const ReadMore = styled.div`
     color: ${({ theme }) => theme.colors.primary};
     background-color: #e0e4e8;
     border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
   }
 `;

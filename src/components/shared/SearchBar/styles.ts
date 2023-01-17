@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
 
   padding: 1rem;
   background-color: ${({ theme }) => theme.colors.darker};
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+  }
 `;
 
 export const Label = styled.label`
@@ -25,4 +29,8 @@ export const Input = styled.input`
 
   border: solid 2px;
   border-radius: 5px;
+
+  @media (max-width: 450px) {
+    width: 90%;
+  }
 `;
