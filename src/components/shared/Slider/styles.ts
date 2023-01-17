@@ -20,6 +20,10 @@ export const GoButton = styled.div`
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
+
+  @media (max-width: 580px) {
+    font-size: 2rem;
+  }
 `;
 
 export const BackButton = styled.div`
@@ -36,6 +40,10 @@ export const BackButton = styled.div`
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
+
+  @media (max-width: 580px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Image = styled.img`
@@ -44,4 +52,16 @@ export const Image = styled.img`
 
   object-fit: cover;
   object-position: center;
+
+  @media (max-width: 700px) {
+    height: 70vh;
+  }
+
+  @media (max-width: 580px) {
+    height: 50vh;
+  }
+
+  @media (max-width: 400px) {
+    height: 40vh;
+  }
 `;
