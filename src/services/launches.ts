@@ -31,7 +31,7 @@ export const fetchAllLaunches = async () => {
 };
 
 export const fetchOneLaunch = async (id: string) => {
-  const response = await fetch(`https://api.spacexdata.com/v4/launches/${id}`);
+  const response = await fetch(`https://api.spacexdata.com/v5/launches/${id}`);
   const launch: LaunchType = await response.json();
   return launch;
 };

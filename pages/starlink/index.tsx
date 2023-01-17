@@ -22,7 +22,6 @@ const Starlink = (props: {
   starlinkList?: StarlinkType[];
 }) => {
   const [query, setQuery] = useState<string>();
-  const [currentPopUp, setCurrentPopUp] = useState<string>("0");
   const starlinksToCompile: StarlinkType[] = [];
 
   props.starlinkList?.forEach((starlink) => {
@@ -39,16 +38,6 @@ const Starlink = (props: {
     setQuery("");
   }, []);
 
-  const starlinkPopUpObject: any = {
-    0: <div></div>,
-  };
-
-  props.starlinkList?.forEach((starlink) => {
-    starlinkPopUpObject[starlink.id] = (
-      <PopUpSetup popUpState={setCurrentPopUp}></PopUpSetup>
-    );
-  });
-
   return (
     <>
       <Head>
@@ -62,14 +51,11 @@ const Starlink = (props: {
       />
       <SearchBar setStateMethod={setQuery} type="starlinks" />
 
-      {starlinkPopUpObject[currentPopUp]}
-
       <S.Wrapper>
         {starlinksToCompile.map((starlink) => (
           <SmallCard
             key={starlink.id}
             name={starlink.spaceTrack.OBJECT_NAME}
-            popUpState={setCurrentPopUp}
             id={starlink.id}
           />
         ))}
