@@ -5,7 +5,7 @@ import * as S from "./styles";
 const SmallCard = (props: {
   children?: ReactNode;
   name: string;
-  id: string;
+  id?: string;
   popUpState?: (string: string) => void;
   linkToPush?: string;
 }) => {

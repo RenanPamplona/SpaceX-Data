@@ -4,8 +4,8 @@ import React, { ReactNode, useEffect, useState } from "react";
 import MediumCard from "../../src/components/Cards/MediumCard";
 import CrewPopUp from "../../src/components/PopUps/CrewPopUp";
 import PopUpSetup from "../../src/components/PopUpSetup";
-import SearchBar from "../../src/components/SearchBar";
-import TitleWithImage from "../../src/components/TitleWithImage";
+import SearchBar from "../../src/components/shared/SearchBar";
+import TitleWithImage from "../../src/components/shared/TitleWithImage";
 import { CrewType, fetchAllCrew } from "../../src/services/crew";
 import * as S from "./styles";
 

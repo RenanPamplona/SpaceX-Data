@@ -12,7 +12,7 @@ import Head from "next/head";
 import { useRouter } from "next/navigation";
 import React from "react";
 import styled from "styled-components";
-import TitleWithImage from "../src/components/TitleWithImage";
+import TitleWithImage from "../src/components/shared/TitleWithImage";
 
 const Wrapper = styled.div`
   padding: 3rem 25%;

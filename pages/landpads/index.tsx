@@ -2,8 +2,8 @@ import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
 import BigCard from "../../src/components/Cards/BigCard";
-import SearchBar from "../../src/components/SearchBar";
-import TitleWithImage from "../../src/components/TitleWithImage";
+import SearchBar from "../../src/components/shared/SearchBar";
+import TitleWithImage from "../../src/components/shared/TitleWithImage";
 import { fetchAllLandpads, LandpadType } from "../../src/services/landpads";
 import * as S from "./styles";
 

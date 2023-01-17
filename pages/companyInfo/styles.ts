@@ -6,26 +6,9 @@ export const Wrapper = styled.div`
 `;
 
 export const ButtonsDiv = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-`;
-
-export const LinkButton = styled.button`
-  font-size: 1.2rem;
-  font-weight: 700;
-
-  padding: 1rem 2rem;
-
-  border: transparent 2px solid;
-  border-radius: 5px;
-
-  color: #f1f5f9;
-  background-color: ${({ theme }) => theme.colors.primary};
-  &:hover {
-    border-color: ${({ theme }) => theme.colors.primary};
-    background-color: #f1f5f9;
-    color: ${({ theme }) => theme.colors.primary};
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
 `;
 
 export const MainInfo = styled.div`
