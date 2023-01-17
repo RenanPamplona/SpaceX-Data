@@ -20,7 +20,7 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>SpaceX Data</title>
+        <title>SpaceX Information</title>
       </Head>
       <TitleWithImage
         title="SpaceX"
