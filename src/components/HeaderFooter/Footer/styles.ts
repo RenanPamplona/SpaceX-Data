@@ -7,6 +7,10 @@ export const Footer = styled.div`
   padding: 2rem;
 
   background-color: ${({ theme }) => theme.colors.darker};
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 `;
 
 export const Link = styled.a`
@@ -19,7 +23,7 @@ export const Link = styled.a`
   }
 `;
 
-export const PreText = styled.span`
+export const Text = styled.span`
   color: ${({ theme }) => theme.colors.text};
   opacity: 0.6;
 `;

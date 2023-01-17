@@ -27,7 +27,7 @@ const CrewPopUp = (props: { children?: ReactNode; crewMember: CrewType }) => {
         ))
       );
     });
-  }, []);
+  }, [props.crewMember.launches]);
 
   return (
     <>

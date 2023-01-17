@@ -15,9 +15,6 @@ const Header = (props: { children?: ReactNode; themeButton: JSX.Element }) => {
         <Link style={{ textDecoration: "none" }} href="/companyInfo">
           <S.Link>INFO</S.Link>
         </Link>
-        <Link href="/about" style={{ textDecoration: "none" }}>
-          <S.Link>ABOUT</S.Link>
-        </Link>
       </S.LinksSection>
 
       <S.ButtonSection>{props.themeButton}</S.ButtonSection>
