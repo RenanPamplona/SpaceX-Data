@@ -1,13 +1,13 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
+import * as S from "../../pagesStyles/crew";
 import MediumCard from "../../src/components/Cards/MediumCard";
 import CrewPopUp from "../../src/components/PopUps/CrewPopUp";
 import PopUpSetup from "../../src/components/PopUpSetup";
 import SearchBar from "../../src/components/shared/SearchBar";
 import TitleWithImage from "../../src/components/shared/TitleWithImage";
 import { CrewType, fetchAllCrew } from "../../src/services/crew";
-import * as S from "./styles";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const crewMembers = await fetchAllCrew();

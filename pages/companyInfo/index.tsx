@@ -2,11 +2,11 @@ import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import React, { ReactNode } from "react";
+import * as S from "../../pagesStyles/companyInfo";
 import SmallCard from "../../src/components/Cards/SmallCard";
 import LabelAndInfo from "../../src/components/shared/LabelAndInfo";
 import TitleWithImage from "../../src/components/shared/TitleWithImage";
 import { CompanyType, fetchCompanyData } from "../../src/services/company";
-import * as S from "./styles";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const companyInfo = await fetchCompanyData();

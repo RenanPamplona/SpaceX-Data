@@ -1,12 +1,12 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode } from "react";
+import * as S from "../../../pagesStyles/rocketID";
 import SmallCard from "../../../src/components/Cards/SmallCard";
 import LabelAndInfo from "../../../src/components/shared/LabelAndInfo";
 import Slider from "../../../src/components/shared/Slider";
 import TitleWithImage from "../../../src/components/shared/TitleWithImage";
 import { fetchOneRocket, RocketType } from "../../../src/services/rocket";
-import * as S from "./styles";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const id = context.params?.id;

@@ -1,11 +1,11 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
+import * as S from "../../pagesStyles/launches";
 import MediumCard from "../../src/components/Cards/MediumCard";
 import SearchBar from "../../src/components/shared/SearchBar";
 import TitleWithImage from "../../src/components/shared/TitleWithImage";
 import { fetchAllLaunches, LaunchType } from "../../src/services/launches";
-import * as S from "./styles";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const launchArray = await fetchAllLaunches();

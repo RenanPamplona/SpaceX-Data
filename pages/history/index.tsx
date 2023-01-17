@@ -1,10 +1,10 @@
 import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect } from "react";
+import * as S from "../../pagesStyles/history";
 import HistoryCard from "../../src/components/Cards/HistoryCard";
 import TitleWithImage from "../../src/components/shared/TitleWithImage";
 import { fetchHistory, HistoryType } from "../../src/services/history";
-import * as S from "./styles";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const historyArray = await fetchHistory();
