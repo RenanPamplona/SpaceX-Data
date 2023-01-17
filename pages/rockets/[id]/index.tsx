@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode } from "react";
 import SmallCard from "../../../src/components/Cards/SmallCard";
@@ -29,7 +29,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 };
 
-const IndividualRocket = (props: {
+const IndividualRocket: NextPage = (props: {
   children?: ReactNode;
   rocket?: RocketType;
 }) => {

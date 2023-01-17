@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
 import BigCard from "../../src/components/Cards/BigCard";
@@ -17,9 +17,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
   };
 };
 
-const Landpads = (props: {
+const Landpads: NextPage = (props: {
   children?: ReactNode;
-  landpadsArray: LandpadType[];
+  landpadsArray?: LandpadType[];
 }) => {
   const [query, setQuery] = useState<string>();
   const landpadsToCompile: LandpadType[] = [];

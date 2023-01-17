@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
 import MediumCard from "../../src/components/Cards/MediumCard";
@@ -19,7 +19,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
   };
 };
 
-const Crew = (props: { children?: ReactNode; crewMembers?: CrewType[] }) => {
+const Crew: NextPage = (props: {
+  children?: ReactNode;
+  crewMembers?: CrewType[];
+}) => {
   const [query, setQuery] = useState<string>();
   const [currentPopUp, setCurrentPopUp] = useState<string>("0");
   const crewMembersToCompile: CrewType[] = [];

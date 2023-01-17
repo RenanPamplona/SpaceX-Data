@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import React, { ReactNode, useEffect, useState } from "react";
 import SmallCard from "../../src/components/Cards/SmallCard";
@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   };
 };
 
-const Starlink = (props: {
+const Starlink: NextPage = (props: {
   children?: ReactNode;
   starlinkList?: StarlinkType[];
 }) => {
